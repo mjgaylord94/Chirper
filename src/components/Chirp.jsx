@@ -1,13 +1,13 @@
 import React from 'react';
 
-const Chirp = ({ imageLink, username, chirpText }) => {
+const Chirp = (props) => {
     return (
         <>
-            <div style={{ border: "5px solid black", margin: '0 2em 1em', marginTop: '0', padding: '1em', backgroundColor: 'white' }}>
-                <img src={imageLink}
+            <div className="chirp">
+                <img src={props.chirp.image}
                     alt="egg" width="75px" height="75px"/>
-                <h3>@{username}</h3>
-                <p>{chirpText}</p>
+                <h3>@{props.chirp.username}</h3>
+                <p>{props.chirp.chirpText}</p>
             </div>
         </>
     );
